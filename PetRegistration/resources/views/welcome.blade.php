@@ -39,67 +39,27 @@
                 </div>
 
                 <div class="card-body">
-                    <h1>Welcome to DocuPet</h1>
-                    <hr>
+                    <h1>Pet Registration</h1>
+
                     {{--Form--}}
                     <div id="form_row" class="row container">
                         <form id="pet_form" method="post">
                             @csrf
                             {{--Pet Type btn radio--}}
-                            <div id="pet_select_row">
-                                <h3>I have a ...</h3>
-                                    <input type="radio" value="1" class="btn-check btn-lg" name="type_radio" id="dog_radio" autocomplete="off">
-                                    <label class="btn  btn-lg btn-outline-primary" for="dog_radio">Dog</label>
-
-                                    <input type="radio"  value="2" class="btn-check btn-lg" name="type_radio" id="cat_radio" autocomplete="off">
-                                    <label class="btn btn-lg btn-outline-primary" for="cat_radio">Cat</label>
-                            </div>
+                            @include('petTypeRadio')
 
                             {{--Pet Data--}}
-                            <fieldset>
+                            @include('petMainData')
 
-                                <h3>Tell us more about your Pet</h3>
-                                <div class="mb-3">
-                                    <label for="pet_name" class="form-label">What is your pet's name?</label>
-                                    <input type="text" id="pet_name" class="form-control" >
-                                </div>
-                                <div class="mb-3">
-                                    <label for="breed_select" class="form-label">What is your pet's breed?</label>
-                                    <select id="breed_select" class="form-select">
-                                        <option></option>
-                                    </select>
-                                </div>
+                            {{-- Breed Extra options Radio check--}}
+                            @include('petBreedExtra')
 
-                                {{--Radio check--}}
-                                <div class="mb-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="breed_radio" id="idk_radio">
-                                        <label class="form-check-label" for="idk_radio">
-                                            I don't know
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="breed_radio" id="mix_radio">
-                                        <label class="form-check-label" for="mix_radio">
-                                            It's a mix
-                                        </label>
-                                    </div>
-                                </div>
+                            {{--Pet Gender btn radio--}}
+                            @include('petGenderRadio')
 
-                                {{--Pet Gender btn radio--}}
-                                <div id="gender_select_row">
-                                    <h3>Gender</h3>
-                                    <input type="radio" value="1" class="btn-check btn-lg" name="gender_radio" id="male_radio" autocomplete="off">
-                                    <label class="btn  btn-lg btn-outline-primary" for="male_radio">Male</label>
+                            <hr>
+                            <button id="register_pet" type="submit" class="btn btn-lg btn-success">Register</button>
 
-                                    <input type="radio"  value="2" class="btn-check btn-lg" name="gender_radio" id="female_radio" autocomplete="off">
-                                    <label class="btn btn-lg btn-outline-primary" for="female_radio">Female</label>
-                                </div>
-
-
-                                <hr>
-                                <button id="register_pet" type="submit" class="btn btn-lg btn-success">Register</button>
-                            </fieldset>
                         </form>
                     </div>
                 </div>
