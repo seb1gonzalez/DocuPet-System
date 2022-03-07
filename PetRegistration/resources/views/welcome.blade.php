@@ -43,7 +43,7 @@
 
                     {{--Form--}}
                     <div id="form_row" class="row container">
-                        <form id="pet_form" method="post">
+                        <form id="pet_form" method="post" action="{{route('savePet')}}">
                             @csrf
                             {{--Pet Type btn radio--}}
                             @include('petTypeRadio')
@@ -67,8 +67,13 @@
         </div>
     </body>
     <script>
+        // cant submit without all required fields
         $('#register_pet').prop('disabled', true);
+
+
         $(document).ready(function () {
+
+            // enable submit when enough fields are fill
             $("#pet_form").change(function () {
 
                 if ($('#pet_name').val() !== '' &&
