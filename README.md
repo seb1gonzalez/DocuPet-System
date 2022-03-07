@@ -1,7 +1,7 @@
 # DocuPet-System
 
 To run application:
-1. Clone this repository and cd into it
+1. Clone this repository and cd into PetRegistration/
 2. Run composer install.
 3. Run cp .env.example .env.
 4. Run php artisan key:generate.
