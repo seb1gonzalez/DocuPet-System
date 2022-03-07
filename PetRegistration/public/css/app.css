@@ -1,0 +1,36 @@
+body {
+    background-color: #e3e3e3 !important;
+}
+
+#registration_card {
+    margin-top: 2em;
+    border-radius: 25px;
+    width: fit-content;
+
+    /*Center card*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#paws_img{
+    width: 90%;
+    display: block;
+    margin: .5em auto;
+
+
+}
+
+#docupet_header{
+    /*Center Text*/
+    display: block;
+    text-align: center !important;
+
+}
+
+#pet_select_row , #gender_select_row{
+    margin-bottom: 2em;
+}
+#form_row{
+    margin-top: 2em;
+}
